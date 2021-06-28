@@ -12,7 +12,7 @@ on:
     branches:
     - '*'
   schedule:
-  - cron:  "0 0 * */1 *" # At 00:00 in every month.
+  - cron:  "0 0 */1 * *" # At 00:00 in every month.
   workflow_dispatch:
 
 jobs:
