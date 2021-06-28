@@ -26,7 +26,7 @@ jobs:
           submodules: 'recursive'
           fetch-depth: 0
       - name: "🛠️ Build"
-        run: make all -P$(nproc)
+        run: make all -j1
       - name: "Retag image"
         run: docker images --filter=reference='tinycore' --format='{{.Repository}}:{{.Tag}}' | xargs -r -P$(nproc) -I {} docker image tag {} bensuperpc/{}
       - name: "Logging to docker"
