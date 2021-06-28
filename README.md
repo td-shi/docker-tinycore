@@ -23,8 +23,8 @@ and Dockerfile of these images are found at
 
 - [`12.0-x86`, `latest` (12.0/x86/Dockerfile)](https://github.com/bensuperpc/docker-tinycore/blob/master/12.0/x86/Dockerfile)
 - [`12.0-x86_64` (12.0/x86\_64/Dockerfile)](https://github.com/bensuperpc/docker-tinycore/blob/master/12.0/x86_64/Dockerfile)
-- [`11.0-x86`, `latest` (11.0/x86/Dockerfile)](https://github.com/bensuperpc/docker-tinycore/blob/master/11.1/x86/Dockerfile)
-- [`11.0-x86_64` (11.0/x86\_64/Dockerfile)](https://github.com/bensuperpc/docker-tinycore/blob/master/11.1/x86_64/Dockerfile)
+- [`11.0-x86`, `latest` (11.0/x86/Dockerfile)](https://github.com/bensuperpc/docker-tinycore/blob/master/11.0/x86/Dockerfile)
+- [`11.0-x86_64` (11.0/x86\_64/Dockerfile)](https://github.com/bensuperpc/docker-tinycore/blob/master/11.0/x86_64/Dockerfile)
 - [`10.1-x86` (10.1/x86/Dockerfile)](https://github.com/bensuperpc/docker-tinycore/blob/master/10.1/x86/Dockerfile)
 - [`10.1-x86_64` (10.1/x86\_64/Dockerfile)](https://github.com/bensuperpc/docker-tinycore/blob/master/10.1/x86_64/Dockerfile)
 - [`10.0-x86` (10.0/x86/Dockerfile)](https://github.com/bensuperpc/docker-tinycore/blob/master/10.0/x86/Dockerfile)
