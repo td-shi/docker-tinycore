@@ -1,5 +1,8 @@
 Tiny Core Linux Docker Image
 ============================
+[![docker-tinycore](https://github.com/bensuperpc/docker-tinycore/actions/workflows/main.yml/badge.svg)](https://github.com/bensuperpc/docker-tinycore/actions/workflows/main.yml)
+
+![Docker Pulls](https://img.shields.io/docker/pulls/bensuperpc/tinycore) ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/bensuperpc/tinycore/latest)
 
 This provides a very small CLI system image based on Tiny Core Linux developed
 at [The Core Project](http://tinycorelinux.net). It contains following Core
