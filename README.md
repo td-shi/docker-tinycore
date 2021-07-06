@@ -9,8 +9,8 @@ at [The Core Project](http://tinycorelinux.net). It contains following Core
 x86/x86\_64 packages
 
 - rootfs.gz (or rootfs64.gz): contains base system binaries and a file system
-  layout
-- squashfs-tools.tcz: contains a squashfs builder and expander
+  layout.
+- squashfs-tools.tcz: contains a squashfs builder and expander.
 
 These original packages are found under
 
