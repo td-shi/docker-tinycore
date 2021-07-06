@@ -3,9 +3,7 @@ name: docker-tinycore
 on:
   push:
     branches:
-    - 'main'
-    - 'master'
-    - 'dev'
+    - '*'
     paths-ignore:
     - '**/README.md'
   pull_request:
