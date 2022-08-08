@@ -1,8 +1,8 @@
-Tiny Core Linux Docker Image
-============================
-[![docker-tinycore](https://github.com/bensuperpc/docker-tinycore/actions/workflows/main.yml/badge.svg)](https://github.com/bensuperpc/docker-tinycore/actions/workflows/main.yml)
+# Tiny Core Linux Docker Image
 
-![Docker Pulls](https://img.shields.io/docker/pulls/bensuperpc/tinycore) ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/bensuperpc/tinycore/latest)
+[![docker-tinycore](https://github.com/td-shi/docker-tinycore/actions/workflows/main.yml/badge.svg)](https://github.com/td-shi/docker-tinycore/actions/workflows/main.yml)
+
+![Docker Pulls](https://img.shields.io/docker/pulls/tdshi/tinycore) ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/tdshi/tinycore/latest)
 
 This provides a very small CLI system image based on Tiny Core Linux developed
 at [The Core Project](http://tinycorelinux.net). It contains following Core
@@ -14,92 +14,48 @@ x86/x86\_64 packages
 
 These original packages are found under
 
- - http://tinycorelinux.net/12.x/
- - http://tinycorelinux.net/11.x/
- - http://tinycorelinux.net/10.x/
- - http://tinycorelinux.net/9.x/
- - http://tinycorelinux.net/8.x/
- - http://tinycorelinux.net/7.x/
- - http://tinycorelinux.net/6.x/
-
+- http://tinycorelinux.net/13.x/
+ 
 and Dockerfile of these images are found at
 
-- [`12.0-x86`, `latest` (12.0/x86/Dockerfile)](https://github.com/bensuperpc/docker-tinycore/blob/master/12.0/x86/Dockerfile)
-- [`12.0-x86_64` (12.0/x86\_64/Dockerfile)](https://github.com/bensuperpc/docker-tinycore/blob/master/12.0/x86_64/Dockerfile)
-- [`11.0-x86`, `latest` (11.0/x86/Dockerfile)](https://github.com/bensuperpc/docker-tinycore/blob/master/11.0/x86/Dockerfile)
-- [`11.0-x86_64` (11.0/x86\_64/Dockerfile)](https://github.com/bensuperpc/docker-tinycore/blob/master/11.0/x86_64/Dockerfile)
-- [`10.1-x86` (10.1/x86/Dockerfile)](https://github.com/bensuperpc/docker-tinycore/blob/master/10.1/x86/Dockerfile)
-- [`10.1-x86_64` (10.1/x86\_64/Dockerfile)](https://github.com/bensuperpc/docker-tinycore/blob/master/10.1/x86_64/Dockerfile)
-- [`10.0-x86` (10.0/x86/Dockerfile)](https://github.com/bensuperpc/docker-tinycore/blob/master/10.0/x86/Dockerfile)
-- [`10.0-x86_64` (10.0/x86\_64/Dockerfile)](https://github.com/bensuperpc/docker-tinycore/blob/master/10.0/x86_64/Dockerfile)
-- [`9.0-x86` (9.0/x86/Dockerfile)](https://github.com/bensuperpc/docker-tinycore/blob/master/9.0/x86/Dockerfile)
-- [`9.0-x86_64` (9.0/x86\_64/Dockerfile)](https://github.com/bensuperpc/docker-tinycore/blob/master/9.0/x86_64/Dockerfile)
-- [`8.2-x86` (8.2/x86/Dockerfile)](https://github.com/bensuperpc/docker-tinycore/blob/master/8.2/x86/Dockerfile)
-- [`8.2-x86_64` (8.2/x86\_64/Dockerfile)](https://github.com/bensuperpc/docker-tinycore/blob/master/8.2/x86_64/Dockerfile)
-- [`8.1-x86` (8.1/x86/Dockerfile)](https://github.com/bensuperpc/docker-tinycore/blob/master/8.1/x86/Dockerfile)
-- [`8.1-x86_64` (8.1/x86\_64/Dockerfile)](https://github.com/bensuperpc/docker-tinycore/blob/master/8.1/x86_64/Dockerfile)
-- [`8.0-x86` (8.0/x86/Dockerfile)](https://github.com/bensuperpc/docker-tinycore/blob/master/8.0/x86/Dockerfile)
-- [`8.0-x86_64` (8.0/x86\_64/Dockerfile)](https://github.com/bensuperpc/docker-tinycore/blob/master/8.0/x86_64/Dockerfile)
-- [`7.2-x86` (7.2/x86/Dockerfile)](https://github.com/bensuperpc/docker-tinycore/blob/master/7.2/x86/Dockerfile)
-- [`7.2-x86_64` (7.2/x86\_64/Dockerfile)](https://github.com/bensuperpc/docker-tinycore/blob/master/7.2/x86_64/Dockerfile)
-- [`7.1-x86` (7.1/x86/Dockerfile)](https://github.com/bensuperpc/docker-tinycore/blob/master/7.1/x86/Dockerfile)
-- [`7.1-x86_64` (7.1/x86\_64/Dockerfile)](https://github.com/bensuperpc/docker-tinycore/blob/master/7.1/x86_64/Dockerfile)
-- [`7.0-x86` (7.0/x86/Dockerfile)](https://github.com/bensuperpc/docker-tinycore/blob/master/7.0/x86/Dockerfile)
-- [`7.0-x86_64` (7.0/x86\_64/Dockerfile)](https://github.com/bensuperpc/docker-tinycore/blob/master/7.0/x86_64/Dockerfile)
-- [`6.4-x86` (6.4/x86/Dockerfile)](https://github.com/bensuperpc/docker-tinycore/blob/master/6.4/x86/Dockerfile)
-- [`6.4-x86_64` (6.4/x86\_64/Dockerfile)](https://github.com/bensuperpc/docker-tinycore/blob/master/6.4/x86_64/Dockerfile)
-- [`6.3-x86` (6.3/x86/Dockerfile)](https://github.com/bensuperpc/docker-tinycore/blob/master/6.3/x86/Dockerfile)
-- [`6.3-x86_64` (6.3/x86\_64/Dockerfile)](https://github.com/bensuperpc/docker-tinycore/blob/master/6.3/x86_64/Dockerfile)
-- [`6.2-x86` (6.2/x86/Dockerfile)](https://github.com/bensuperpc/docker-tinycore/blob/master/6.2/x86/Dockerfile)
-- [`6.2-x86_64` (6.2/x86\_64/Dockerfile)](https://github.com/bensuperpc/docker-tinycore/blob/master/6.2/x86_64/Dockerfile)
-- [`6.1-x86` (6.1/x86/Dockerfile)](https://github.com/bensuperpc/docker-tinycore/blob/master/6.1/x86/Dockerfile)
-- [`6.1-x86_64` (6.1/x86\_64/Dockerfile)](https://github.com/bensuperpc/docker-tinycore/blob/master/6.1/x86_64/Dockerfile)
-- [`6.0-x86` (6.0/x86/Dockerfile)](https://github.com/bensuperpc/docker-tinycore/blob/master/6.0/x86/Dockerfile)
-- [`6.0-x86_64` (6.0/x86\_64/Dockerfile)](https://github.com/bensuperpc/docker-tinycore/blob/master/6.0/x86_64/Dockerfile)
+- [`13.1-x86`, `latest` (13.1/x86/Dockerfile)](https://github.com/td-shi/docker-tinycore/blob/master/x86/Dockerfile)
+- [`13.1-x86_64` (13.1/x86\_64/Dockerfile)](https://github.com/td-shi/docker-tinycore/blob/master/x86_64/Dockerfile)
 
 ## Installation
 
 The easiest way to install the image is pulling it from
-[Docker Hub repositories](https://registry.hub.docker.com/) like following
+[Docker Hub repositories](https://registry.hub.docker.com/) like following:
 
 ```bash
-docker pull bensuperpc/tinycore:12.0-x86
+docker pull tdshi/tinycore:latest
 ```
 
-or
-
-```bash
-docker pull bensuperpc/tinycore:12.0-x86_64
-```
+The latest is "13.1-x86_64". The other tag is "13.1-x86".
 
 ## Usage
 
-Just run
+Just run:
 
 ```bash
-docker run -it bensuperpc/tinycore:12.0-x86
+docker run -it tdshi/tinycore:latest
 ```
 
-or
-
-```bash
-docker run -it bensuperpc/tinycore:12.0-x86_64
-```
+The latest is "13.1-x86_64". The other tag is "13.1-x86".
 
 To install tcz packages into the container and use them, please run `tce-load`
-command in it like following
+command in it like following:
 
 ```bash
 tce-load -wic bash.tcz
 ```
 
-or run the container with privilege mode like following
+Or run the container with privilege mode like following:
 
 ```bash
-docker run -it --privileged bensuperpc/tinycore:11.0-x86
+docker run -it --privileged tdshi/tinycore:latest
 ```
 
-Once it starts with privilege mode, you can run the package manager like
+And, once it starts with privilege mode, you can run the package manager like
 
 ```bash
 tce-ab
@@ -113,9 +69,47 @@ includes patched `tce-load` which works without privilege mode by using
 to install packages, please use `tce-load` with `-c` option
 
 If you need an example, please see :
-[tinycore-ruby](https://github.com/tatsushid/docker-tinycore-ruby) or
-[tinycore-python](https://github.com/tatsushid/docker-tinycore-python)
-Dockerfile
+- [tinycore-ruby](https://github.com/tatsushid/docker-tinycore-ruby) or
+- [tinycore-python](https://github.com/tatsushid/docker-tinycore-python)
+- Dockerfile
+
+## Tiny Core Linux x86 and x86\_64 Docker Image Builder
+
+Dockerfile and helper scripts for building a very small CLI system image based
+on Tiny Core Linux developed at [The Core Project](http://tinycorelinux.net).
+It builds Core 13.1 x86 and x86\_64 image by using following packages which were
+converted those archive type from The Core Project packages.
+
+- rootfs.tar.gz: contains base system binaries and a file system layout
+- rootfs64.tar.gz: contains base system binaries and a file system layout
+- squashfs-tools.tar.gz: contains a squashfs builder and expander
+
+Those original packages are found under http://tinycorelinux.net/13.x/x86 and
+http://tinycorelinux.net/13.x/x86_64
+
+### How to build the image
+
+Just run
+
+```bash
+make all
+```
+
+To clean up the directory, run
+
+```bash
+make clean
+```
+
+There is something you should be aware of. The `xarg` used in this Makefile
+(clean up) uses the `-r` option, which is a GNU extension. 
+
+### License
+
+rootfs.tar.gz,rootfs64.tar.gz, squashfs-tools.tar.gz and tce-load.patch are under
+[GPLv2](http://www.gnu.org/licenses/gpl-2.0.html). The other build scripts are
+under [MIT](LICENSE).
 
 ## Original author
-tatsushid
+- tatsushid :: origin
+- bensuperpc :: fork
