@@ -9,31 +9,41 @@ on:
   pull_request:
     branches:
     - '*'
-  schedule:
-  - cron:  "5 8 * * 0" # At 08:05 in every Sunday.
   workflow_dispatch:
 
 jobs:
-  image:
-    name: docker-tinycore
+  build-x86:
     runs-on: ubuntu-latest
     steps:
-      - name: "📥 Checkout Code"
-        uses: actions/checkout@v2.4.0
+      - name: "Checkout Code"
+        uses: actions/checkout@v3
         with:
           submodules: 'recursive'
           fetch-depth: 0
-      - name: "🛠️ Build"
-        run: make all -j1
+      - name: "Build"
+        run: cd x86; make all -j1
       - name: "Retag image"
         run: |
-            docker images --filter=reference='tinycore' --format='{{.Repository}}:{{.Tag}}' | xargs -r -P$(nproc) -I {} docker image tag {} bensuperpc/{}
-            docker image tag bensuperpc/tinycore:12.0-x86_64 bensuperpc/tinycore:latest
-      - name: "Logging to docker"
-        run: docker login -u ${{ secrets.DOCKER_USER }} -p ${{ secrets.DOCKER_PASS }}
-      - name: "📤 Upload to hub.docker.com"
-        run: docker push bensuperpc/tinycore --all-tags
-      - name: "🧹 Clean"
-        run: make clean
-
+            docker images --filter=reference='tinycore' --format='{{.Repository}}:{{.Tag}}' | xargs -r -P$(nproc) -I {} docker image tag {} ${{ secrets.DOCKER_HUB_USERNAME }}/{}
+      - name: "Logging and pushing to docker"
+        run: |
+            echo  ${{ secrets.DOCKER_HUB_TOKEN }} | docker login -u ${{ secrets.DOCKER_HUB_USERNAME }} --password-stdin
+            docker push ${{ secrets.DOCKER_HUB_USERNAME }}/tinycore --all-tags
+  build-x86_64:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Checkout Code"
+        uses: actions/checkout@v3
+        with:
+          submodules: 'recursive'
+          fetch-depth: 0
+      - name: "Build"
+        run: cd x86_64; make all -j1
+      - name: "Retag image"
+        run: |
+            docker images --filter=reference='tinycore' --format='{{.Repository}}:{{.Tag}}' | xargs -r -P$(nproc) -I {} docker image tag {} ${{ secrets.DOCKER_HUB_USERNAME }}/{}
+      - name: "Logging and pushing to docker"
+        run: |
+            echo  ${{ secrets.DOCKER_HUB_TOKEN }} | docker login -u ${{ secrets.DOCKER_HUB_USERNAME }} --password-stdin
+            docker push ${{ secrets.DOCKER_HUB_USERNAME }}/tinycore --all-tags
 
